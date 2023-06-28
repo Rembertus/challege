@@ -22,8 +22,8 @@ para canalizar las órdenes de los clientes.
 
 ## Instructions
 ```javascript 
-yarn install    // Para instalar todas las dependencias  
-yarn start:dev  // Para levantar el servicio
+yarn install    // To install all dependencies
+yarn start:dev  // To start the service
 ```
 ## Test from Postman - Info
 Test Info
@@ -48,7 +48,7 @@ Body-Json
     "exchangeName": "binance",
     "amount": 100,
     "transactionType": "purchase",
-    "cryptoCurrency": "bnb"         // Debería considerarse este campo, porque un exchange maneja varias criptomonedas
+    "cryptoCurrency": "bnb"         // This field should be considered, because an exchange handles several cryptocurrencies
 }
 ```
 Result Body-Json
@@ -66,14 +66,7 @@ Result Body-Json
 ```
 ## Test from Postman - balancing-case-1
 GET http://localhost:3001/api/v1/bankathon/balancing-case1  
-
-# Data Test in BalancingService // descomentar
-```javascript 
-    balanceProviders[0].balance = 513000;
-    balanceProviders[1].balance = 1026000;
-    balanceProviders[2].balance = 769500;
-    balanceProviders[3].balance = 256500;
-```
+Result Body-Json
 ```javascript 
 {
     "statusCode": 200,
@@ -133,9 +126,8 @@ Result Body-Json
 }
 ```
 
-
 ## For Support
 
-- [Remberto Gonzales Cruz](regonzales@organojudicial.gob.bo)
+- [Remberto Gonzales Cruz](rembertus@gmail.com)
 
 ## License
