@@ -155,20 +155,20 @@ export class BankathonService {
       try {
         for (const move of resultCase2.move) {
           console.log('MOVE Crypto: from:', move.from, ' to: ', move.to, ' amount:', move.amount);
-          // const responseTransaction = await this.towerbankService.processProviderTransaction(
-          //   move.from,
-          //   move.to,
-          //   move.amount,
-          //   token,
-          //   userAgent
-          // );
+          const responseTransaction = await this.towerbankService.processProviderTransaction(
+            move.from,
+            move.to,
+            move.amount,
+            token,
+            userAgent
+          );
 
-          // if (responseTransaction.status != 200) {
-          //   // await queryRunner.rollbackTransaction();
-          //   // new throw Error(responseTransaction.statusText);
-          //   return new MessageResponse(HttpStatus.FORBIDDEN, responseTransaction.statusText, null);
-          // }
-          // const transaction = await responseTransaction.json();
+          if (responseTransaction.status != 200) {
+            // await queryRunner.rollbackTransaction();
+            // new throw Error(responseTransaction.statusText);
+            return new MessageResponse(HttpStatus.FORBIDDEN, responseTransaction.statusText, null);
+          }
+          const transaction = await responseTransaction.json();
         }
         // await queryRunner.commitTransaction();
       } catch (error) {

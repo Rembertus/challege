@@ -21,9 +21,10 @@ Towerbank entre diferentes plataformas para que siempre exista el disponible
 para canalizar las órdenes de los clientes.  
 
 ## Instructions
-yarn install    // Para instalar todas las dependencias
+```javascript 
+yarn install    // Para instalar todas las dependencias  
 yarn start:dev  // Para levantar el servicio
-
+```
 ## Test from Postman - Info
 Test Info
 GET http://localhost:3001/api/v1/bankathon/info
